@@ -53,7 +53,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @BindView(R.id.btnDivisao)
     Button btnDivisao;
 
+    String textoCalculadora = resultado.getText().toString();
 
+    double[] numeros = new double[100];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,13 +67,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @OnClick(R.id.btnOito)
-    public void btnOitoClick(){
+    public void btnOito(){
         resultado.setText(resultado.getText() + "8");
     }
 
     @OnClick(R.id.btnSoma)
     public void btnSoma(){
+        for(int i = 0; i < textoCalculadora.length(); i++){
+            char c = textoCalculadora.charAt(i);
+            String numero = "";
 
+            if(Character.isDigit(c)){
+
+            }
+        }
     }
 
     @OnClick(R.id.btnIgual)
